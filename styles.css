@@ -246,15 +246,25 @@ ul {
 }
 
 .price-value {
-  font-size: 1.9rem;
+  font-size: 1.35rem;
   font-weight: 600;
   margin-top: 0.3rem;
+  line-height: 1.35;
 }
 
 .price-note {
   font-size: 0.85rem;
   color: #d1d5db;
-  margin: 0.85rem 0 1.25rem;
+  margin: 0.85rem 0 0;
+}
+
+.price-note + .price-note {
+  margin-top: 0.65rem;
+}
+
+.price-note + .btn,
+.hero-price .btn-block {
+  margin-top: 1.25rem;
 }
 
 .hero-front-image {
@@ -364,6 +374,215 @@ ul {
 .note-card p {
   margin: 0;
   font-size: 0.92rem;
+}
+
+/* Estimated Year-One Property Taxes / Tax Profile */
+
+.tax-section {
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tax-convey {
+  margin-top: 0.65rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.tax-table-wrap {
+  margin-top: 1.25rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  max-width: 100%;
+}
+
+.tax-table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tax-table th,
+.tax-table td {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #edf0f5;
+  white-space: nowrap;
+}
+
+.tax-table th {
+  background-color: #f9fafb;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: normal;
+  line-height: 1.35;
+  vertical-align: bottom;
+}
+
+.tax-table tr:last-child td {
+  border-bottom: none;
+}
+
+.tax-table tbody td:first-child {
+  font-weight: 600;
+}
+
+.tax-footnote {
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+  max-width: 48rem;
+  line-height: 1.45;
+}
+
+.tax-status {
+  margin-top: 1.25rem;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid #111827;
+  background-color: #ffffff;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #374151;
+  max-width: 48rem;
+  line-height: 1.45;
+}
+
+.tax-verify {
+  margin-top: 1.5rem;
+}
+
+.tax-verify h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.tax-verify-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tax-verify-links li {
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #edf0f5;
+}
+
+.tax-verify-links li:last-child {
+  border-bottom: 1px solid #edf0f5;
+}
+
+.tax-verify-links a {
+  color: #111827;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.tax-verify-links a:hover {
+  color: #374151;
+}
+
+.tax-parcel-ids {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  font-size: 0.88rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.tax-parcel-ids li {
+  padding: 0.2rem 0;
+}
+
+@media (max-width: 768px) {
+  .tax-table-wrap {
+    border: none;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .tax-table {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.75rem;
+  }
+
+  .tax-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .tax-table tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .tax-table tr {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+    padding: 0.35rem 0;
+    margin: 0;
+  }
+
+  .tax-table td {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 0.75rem 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    word-break: break-word;
+    border-bottom: 1px solid #edf0f5;
+    padding: 0.65rem 1rem;
+  }
+
+  .tax-table tr td:last-child {
+    border-bottom: none;
+  }
+
+  .tax-table td::before {
+    content: attr(data-label);
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 0.78rem;
+    line-height: 1.35;
+    min-width: 0;
+  }
+
+  .tax-table tbody td:first-child {
+    font-weight: 600;
+  }
+
+  .tax-parcel-ids li {
+    overflow-wrap: anywhere;
+  }
 }
 
 /* CTA band */
