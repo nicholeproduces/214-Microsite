@@ -179,13 +179,27 @@ ul {
   background-color: #111827;
 }
 
+.header-inner.nav-open {
+  flex-wrap: wrap;
+}
+
 .header-inner.nav-open .header-nav {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  order: 3;
+  gap: 0.65rem;
+  padding-top: 0.5rem;
+  overflow-x: visible;
+  flex-wrap: wrap;
 }
 
 .header-inner.nav-open .header-ctas {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  order: 4;
+  margin-left: 0;
 }
 
 /* Hero */
@@ -607,6 +621,116 @@ ul {
   margin: 0;
   font-size: 0.9rem;
   color: #e5e7eb;
+}
+
+.cta-band .bullet-list {
+  margin: 1rem 0 0;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.cta-band .bullet-list a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.cta-band .btn-primary {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.cta-band .btn-primary:hover {
+  background-color: #e5e7eb;
+}
+
+/* About the House */
+
+.about-house {
+  background-color: #f8f6f3;
+  border-bottom: 1px solid #e8e4de;
+}
+
+.about-house-copy {
+  max-width: 36rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #2f3542;
+}
+
+.about-house-copy p {
+  margin: 0;
+}
+
+.about-house-systems {
+  margin-top: 2rem;
+}
+
+.as-is-note {
+  margin-top: 1.25rem;
+  max-width: 48rem;
+  padding: 0.95rem 1.1rem;
+  border-left: 3px solid #111827;
+  background-color: #ffffff;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 0.92rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.anchor-comp-card {
+  margin-top: 1.5rem;
+}
+
+.anchor-comp-card a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.sketch-visual {
+  margin-top: 1.5rem;
+}
+
+.comp-charts {
+  margin-top: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  padding: 0.85rem 1rem 1rem;
+}
+
+.comp-charts summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.92rem;
+  list-style: none;
+  color: #111827;
+}
+
+.comp-charts summary::-webkit-details-marker {
+  display: none;
+}
+
+.comp-charts summary::before {
+  content: "+ ";
+  font-weight: 600;
+}
+
+.comp-charts[open] summary::before {
+  content: "– ";
+}
+
+.comp-charts .data-visuals {
+  margin-top: 1rem;
+}
+
+.offer-section {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.contact-cta .btn-block + .btn-block {
+  margin-top: 0.75rem;
 }
 
 /* Systems */
