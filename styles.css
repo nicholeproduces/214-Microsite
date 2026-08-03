@@ -796,6 +796,17 @@ ul {
 
 /* Who This Is For */
 
+.zoning-section {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.highlight-text a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .who-for {
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
