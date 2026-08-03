@@ -746,6 +746,28 @@ ul {
   background-color: #e5e7eb;
 }
 
+/* Walk-through / narrative sections */
+
+.walk-through {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.narrative-copy {
+  max-width: 40rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #2f3542;
+}
+
+.narrative-copy p {
+  margin: 0 0 1rem;
+}
+
+.narrative-copy p:last-child {
+  margin-bottom: 0;
+}
+
 /* About the House */
 
 .about-house {
@@ -761,11 +783,60 @@ ul {
 }
 
 .about-house-copy p {
-  margin: 0;
+  margin: 0 0 1rem;
+}
+
+.about-house-copy p:last-child {
+  margin-bottom: 0;
 }
 
 .about-house-systems {
   margin-top: 2rem;
+}
+
+/* Who This Is For */
+
+.who-for {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.who-for-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.who-for-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.2rem 1.3rem;
+}
+
+.who-for-card h3 {
+  margin-bottom: 0.45rem;
+  font-size: 1.05rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.who-for-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #374151;
+}
+
+.market-color-note {
+  margin-top: 1.5rem;
+  max-width: 48rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #4b5563;
 }
 
 .as-is-note {
@@ -1096,6 +1167,10 @@ ul {
 
   .feature-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .who-for-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .data-grid {
