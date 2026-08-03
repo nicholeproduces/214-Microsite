@@ -457,30 +457,39 @@ ul {
   margin: 0;
 }
 
+.data-list .data-row,
 .data-list li {
   display: grid;
-  grid-template-columns: minmax(7rem, 42%) minmax(0, 1fr);
+  grid-template-columns: minmax(8.5rem, 40%) minmax(0, 1fr);
   column-gap: 1rem;
-  align-items: start;
+  align-items: baseline;
   font-size: 0.9rem;
-  padding: 0.5rem 0;
+  padding: 0.55rem 0;
   border-top: 1px solid #edf0f5;
+  margin: 0;
 }
 
+.data-list dt,
 .data-list li span:first-child {
+  margin: 0;
   color: #6b7280;
   font-weight: 500;
+  line-height: 1.4;
 }
 
+.data-list dt::after,
 .data-list li span:first-child::after {
   content: ":";
 }
 
+.data-list dd,
 .data-list li span:last-child {
+  margin: 0;
   font-weight: 500;
   color: #111827;
   text-align: left;
   overflow-wrap: anywhere;
+  line-height: 1.4;
 }
 
 /* Operations */
