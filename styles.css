@@ -862,6 +862,13 @@ ul {
   line-height: 1.5;
 }
 
+.parcel-alias-note {
+  margin: 0.85rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
 .anchor-comp-card {
   margin-top: 1.5rem;
 }
