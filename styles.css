@@ -334,6 +334,10 @@ ul {
   display: block;
 }
 
+.hero-front-image-secondary {
+  margin-top: 0.75rem;
+}
+
 .hero-price .btn-primary {
   background-color: #f9fafb;
   color: #111827;
