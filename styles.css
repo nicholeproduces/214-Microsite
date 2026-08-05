@@ -732,6 +732,67 @@ ul {
   .tax-parcel-ids li {
     overflow-wrap: anywhere;
   }
+
+  /* Path-requires table: long prose — stack label over value, not side-by-side */
+  .path-table-wrap {
+    margin-top: 0.85rem;
+  }
+
+  .path-table {
+    border-spacing: 0 0.85rem;
+  }
+
+  .path-table td {
+    display: block;
+    grid-template-columns: none;
+    padding: 0.7rem 1rem 0.35rem;
+    border-bottom: none;
+  }
+
+  .path-table td::before {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .path-table td + td {
+    padding-top: 0.15rem;
+    padding-bottom: 0.85rem;
+    border-top: 1px solid #edf0f5;
+  }
+
+  .path-table tbody td:first-child {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #111827;
+  }
+
+  .path-table tbody td:last-child {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #374151;
+    line-height: 1.45;
+  }
+}
+
+/* Path table — wrap on all viewports (tax table keeps nowrap) */
+.path-table {
+  min-width: 0;
+}
+
+.path-table th,
+.path-table td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  vertical-align: top;
+  line-height: 1.45;
+}
+
+.path-table th:first-child,
+.path-table td:first-child {
+  width: 38%;
 }
 
 /* CTA band */
