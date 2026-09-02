@@ -125,7 +125,6 @@ def tax_table():
         ["Sale price", "Taxable (40%)", "Est. annual — investment", "Est. annual — owner-occupied"],
         ["$550,000", "$220,000", "~$8,903", "~$7,600"],
         ["$600,000", "$240,000", "~$9,713", "~$8,400"],
-        ["$649,000", "$259,600", "~$10,506", "~$9,180"],
         ["$700,000", "$280,000", "~$11,332", "~$9,900"],
         ["$750,000", "$300,000", "~$12,141", "~$10,600"],
     ]
@@ -162,11 +161,11 @@ def build():
         P("OFFERING PACKET", "Kicker"),
         P("214 + 0 South Ave SE", "PktTitle"),
         P("Atlanta, GA 30315  ·  Summerhill", "Sub"),
-        P("<b>$649,000 — both parcels, one closing, delivered vacant.</b>"),
+        P("<b>Accepting offers — both parcels, one closing, delivered vacant.</b>"),
         P("A three-bedroom house that has helped pay for itself for fifteen years, and the corner parcel beside it that most people mistake for a side yard. You can live in it. You can rent rooms in it. You can build on the lot, subject to what follows. You can do all three."),
         HRFlowable(width="100%", thickness=1, color=RULE, spaceAfter=8),
         P("Savage Props, LLC  ·  Nichole Wleklinski  ·  217-621-5151  ·  www.214southave.com", "Small"),
-        P("Prepared August 2026 · Last updated August 14, 2026. Items marked PENDING are being confirmed and will be added as received.", "SmallI"),
+        P("Prepared August 2026 · Last updated September 2, 2026. Items marked PENDING are being confirmed and will be added as received.", "SmallI"),
     ]
 
     # 1 Summary
@@ -179,7 +178,7 @@ def build():
             ("Lot sizes", "3,107 SF improved + 3,016 SF vacant = ~6,123 SF combined"),
             ("Zoning", "R-4B-C conditional — Summerhill rezoning Z-06-24 / Ord. 06-O-0567"),
             ("House", "~1,800 SF, 3 BR / 2.5 BA, built 2005, corner lot"),
-            ("Deck", "1,100 SF, built 2011, reinforced joists"),
+            ("Deck", "1,100 SF, built 2011, reinforced joists; recently replaced railings"),
             ("Delivery", "Vacant at closing. All current agreements expire August 25, 2026."),
             ("Terms", "Both parcels are offered together as one transaction. Proposals for the parcels separately will be considered."),
         ]),
@@ -192,18 +191,15 @@ def build():
         P("2. What You'll See When You Walk Through", "H1"),
         P("This is a lived-in house, not a staged one. Here is what needs work, before you drive over."),
         bullets([
-            "Carpets need replacing throughout",
             "Kitchen cabinets need touch-ups — not a full refinish",
-            "Several deck boards are soft; railings need attention",
             "Exterior stairs need repair or replacement",
             "One bathroom still has the original 2008 fiberglass shower surround — structurally sound, but noisy and due for replacement",
-            "Roof is original to 2005 construction, approximately 21 years old. A drone inspection in August 2026 identified missing shingles; roof structure reported sound from inside the attic. An independent scope of work is pending and will be added to this packet. An independent insurance agent has confirmed the roof is insurable on an actual cash value basis once the shingles are addressed.",
             "The crawl space HVAC unit lacks a proper shutoff (noted by Coolray, August 2026)",
             "A fixture shutoff valve does not fully close when the supply line is disconnected; it does not leak in normal operation. Replacement scheduled.",
         ]),
-        P("All of it is reflected in the asking price."),
-        P("What you will also see: a clean, safe, functioning house. Upstairs HVAC replaced 2023 with transferable lifetime warranty (see Section 3). An 1,100 SF deck with reinforced joists. A driveway updated in 2023 that fits two cars. Smart water shutoff, Nest thermostats, hardwired cameras. Three bedrooms that have housed working professionals continuously for years."),
-        P("<b>Seller will remove carpet prior to closing at buyer's request, at no cost. This is a condition of sale, not a credit.</b>"),
+        P("All of it is reflected in how the property is positioned for offers."),
+        P("Recently replaced deck railings. Newly painted interiors and exteriors by September 6!"),
+        P("What you will also see: a clean, safe, functioning house. Upstairs HVAC replaced 2023 with transferable lifetime warranty (see Section 3). An 1,100 SF deck with reinforced joists and recently replaced railings. A driveway updated in 2023 that fits two cars. Smart water shutoff, Nest thermostats, hardwired cameras. Three bedrooms that have housed working professionals continuously for years."),
         P("The list above is the disclosure. A written contractor scope with pricing is being prepared and will be added to this packet."),
     ]
 
@@ -222,7 +218,7 @@ def build():
             ("Configuration", "3 BR / 2.5 BA"),
             ("Year built", "2005 · purchased by current owner 2010"),
             ("Lot", "3,107 SF (0.0713 acres), corner"),
-            ("Deck", "1,100 SF, built 2011. Reinforced joists on the north end — engineered to carry roughly 700 gallons of water plus multiple people"),
+            ("Deck", "1,100 SF, built 2011. Reinforced joists on the north end — engineered to carry roughly 700 gallons of water plus multiple people; recently replaced railings"),
             ("HVAC", hvac),
             ("Water", "Moen smart shutoff with remote monitoring"),
             ("Controls", "Nest thermostats; hardwired camera system; Nest/Google cameras at driveway and door"),
@@ -339,7 +335,7 @@ def build():
     # 7 Valuation
     story += [
         P("7. Valuation", "H1"),
-        P("Asking price: $649,000 — both parcels, one closing."),
+        P("Accepting offers — both parcels, one closing."),
         P("Improved comparables, 18 months", "H2"),
         bullets([
             "Median closed sale: $601,000",
@@ -362,7 +358,7 @@ def build():
         ]),
         Spacer(1, 4),
         P("The combined figure applies the unadjusted land range. The constraints above argue for a lower land component."),
-        P("The asking price reflects a discount to indicated value in exchange for a clean, as-is, single-closing transaction."),
+        P("Offers are invited for a clean, as-is, single-closing transaction."),
         P("Upper-end reference", "H2"),
         P("218 South Ave SE — 2,668 SF, 4 BR / 4 BA with garage and major upgrades, on a 7,688 SF lot — sold for $825,000 on August 21, 2025. Larger in both structure and land; a ceiling reference, not a direct comparable."),
         P("Market color", "H2"),
@@ -428,7 +424,6 @@ def build():
             "Buyer representation welcome",
             "Showings by appointment only",
             "Seller is completing a 1031 exchange — no credits or payments to buyer can be structured",
-            "Seller will remove carpet prior to closing at buyer's request, at no cost",
             "Seller can accommodate an expedited closing, including for buyers in a 1031 identification window",
         ]),
         HRFlowable(width="100%", thickness=1, color=RULE, spaceBefore=10, spaceAfter=8),
