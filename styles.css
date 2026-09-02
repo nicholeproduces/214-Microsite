@@ -321,6 +321,17 @@ ul {
   margin-top: 0.65rem;
 }
 
+.hero-price > .price-note:first-child {
+  margin-top: 0;
+}
+
+.price-note-lead {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #f9fafb;
+}
+
 .price-note + .btn,
 .hero-price .btn-block,
 .hero-price .cta-pair {
