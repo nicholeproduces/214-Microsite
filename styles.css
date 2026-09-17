@@ -43,6 +43,14 @@ h1 {
   font-size: 1.9rem;
 }
 
+.hero-address-line {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #4b5563;
+}
+
 .hero-asking {
   margin: 0.85rem 0 1.1rem;
 }
@@ -56,6 +64,13 @@ h1 {
   color: #0b1020;
 }
 
+.hero-asking-context {
+  margin: 0.55rem 0 0;
+  font-size: 0.98rem;
+  color: #374151;
+  max-width: 36rem;
+}
+
 .hero-asking-tagline {
   margin: 0.45rem 0 0;
   font-size: 1.05rem;
@@ -66,6 +81,37 @@ h1 {
   margin: 0.35rem 0 0;
   font-size: 0.95rem;
   color: #4b5563;
+}
+
+.print-page-link-wrap {
+  max-width: 1120px;
+  margin: 0.5rem auto 0;
+  padding: 0 1.25rem;
+  text-align: right;
+}
+
+.print-page-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.85rem;
+  color: #4b5563;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.print-page-link:hover {
+  color: #111827;
+}
+
+.print-only {
+  display: none;
+}
+
+.print-running-footer {
+  display: none;
 }
 
 .hero-cta-pair {
@@ -1398,4 +1444,167 @@ ul {
     padding: 4rem 1.5rem;
   }
 }
+
+/* Print */
+
+@media print {
+  @page {
+    margin: 0.75in 0.7in 0.9in;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-masthead {
+    margin: 0 0 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #000;
+  }
+
+  .print-masthead-address {
+    margin: 0 0 0.35rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .print-masthead-price {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .print-masthead-vacant {
+    margin: 0.35rem 0 0;
+    font-size: 1rem;
+  }
+
+  .site-header,
+  .nav-toggle,
+  .header-nav,
+  .header-ctas,
+  .print-page-link-wrap,
+  .cta-pair,
+  .contact-cta,
+  .footer-actions,
+  .hero-price .cta-pair,
+  .seo-content {
+    display: none !important;
+  }
+
+  .site-footer {
+    border: none;
+    background: transparent !important;
+  }
+
+  .footer-text {
+    color: #000;
+  }
+
+  body {
+    padding-bottom: 1.25rem;
+  }
+
+  .section {
+    padding: 1.25rem 0;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .section-inner,
+  .print-page-link-wrap,
+  .footer-inner {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-grid {
+    display: block;
+  }
+
+  .hero-price {
+    background: transparent !important;
+    color: #000 !important;
+    border: 1px solid #000;
+    margin-top: 1rem;
+  }
+
+  .hero-price .price-note,
+  .hero-price .price-note-lead {
+    color: #000 !important;
+  }
+
+  .card,
+  .who-for-card,
+  .feature-tile,
+  .note-card,
+  .mini-table,
+  .median-lead-card,
+  .valuation-support-card,
+  .anchor-comp-card {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    word-break: break-all;
+  }
+
+  a[href^="/"]::after,
+  a[href^="#"]::after,
+  a[href^="mailto"]::after,
+  a[href^="docs/"]::after,
+  a[href^="photos/"]::after {
+    content: none;
+  }
+
+  table,
+  tr,
+  .data-row,
+  .feature-tile,
+  .card,
+  .who-for-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-page-break-before {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .print-running-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.7rem;
+    color: #000;
+    border-top: 1px solid #999;
+    padding-top: 0.25rem;
+  }
+
+  .print-running-footer::after {
+    content: " · Page " counter(page);
+  }
+}
+
 
