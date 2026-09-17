@@ -123,6 +123,7 @@ def val_table(rows):
 def tax_table():
     rows = [
         ["Sale price", "Taxable (40%)", "Est. annual — investment", "Est. annual — owner-occupied"],
+        ["<b>$529,000</b>", "<b>$211,600</b>", "<b>~$8,563</b>", "<b>~$7,260</b>"],
         ["$550,000", "$220,000", "~$8,903", "~$7,600"],
         ["$600,000", "$240,000", "~$9,713", "~$8,400"],
         ["$700,000", "$280,000", "~$11,332", "~$9,900"],
@@ -138,6 +139,7 @@ def tax_table():
         ("TOPPADDING", (0, 0), (-1, -1), 4),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
         ("GRID", (0, 0), (-1, -1), 0.4, RULE),
+        ("BACKGROUND", (0, 1), (-1, 1), ROW),
     ]
     t.setStyle(TableStyle(style_cmds))
     return t
@@ -161,11 +163,12 @@ def build():
         P("OFFERING PACKET", "Kicker"),
         P("214 + 0 South Ave SE", "PktTitle"),
         P("Atlanta, GA 30315  ·  Summerhill", "Sub"),
-        P("<b>Accepting offers — both parcels, one closing, delivered vacant.</b>"),
+        P("<b>Asking $529,000 — both parcels, one closing. Vacant now. Showings by appointment.</b>"),
+        P("<i>Priced below the county's combined assessed value, reflecting the deferred maintenance disclosed below.</i>"),
         P("A three-bedroom house that has helped pay for itself for fifteen years, and the corner parcel beside it that most people mistake for a side yard. You can live in it. You can rent rooms in it. You can build on the lot, subject to what follows. You can do all three."),
         HRFlowable(width="100%", thickness=1, color=RULE, spaceAfter=8),
         P("Savage Props, LLC  ·  Nichole Wleklinski  ·  217-621-5151  ·  www.214southave.com", "Small"),
-        P("Prepared August 2026 · Last updated September 2, 2026. Items marked PENDING are being confirmed and will be added as received.", "SmallI"),
+        P("Prepared August 2026 · Last updated September 16, 2026. Items marked PENDING are being confirmed and will be added as received.", "SmallI"),
     ]
 
     # 1 Summary
@@ -175,11 +178,12 @@ def build():
             ("Address", "214 South Ave SE + 0 South Ave SE, Atlanta GA 30315"),
             ("Parcels", "14 -0054-0009-010-6 (Acct 1022835)  ·  14 -0054-0009-011-4 (Acct 1022843)"),
             ("Note on address", "0 South Ave SE appears in City of Atlanta records as 212 South Avenue SE"),
+            ("Asking price", "$529,000 — both parcels, one closing"),
             ("Lot sizes", "3,107 SF improved + 3,016 SF vacant = ~6,123 SF combined"),
             ("Zoning", "R-4B-C conditional — Summerhill rezoning Z-06-24 / Ord. 06-O-0567"),
             ("House", "~1,800 SF, 3 BR / 2.5 BA, built 2005, corner lot"),
-            ("Deck", "1,100 SF, built 2011, reinforced joists; recently replaced railings"),
-            ("Delivery", "Vacant at closing. All current agreements expire August 25, 2026."),
+            ("Deck", "1,100 SF, built 2011, reinforced joists; railings replaced and deck refinished September 2026"),
+            ("Status", "Vacant now. Showings by appointment."),
             ("Terms", "Both parcels are offered together as one transaction. Proposals for the parcels separately will be considered."),
         ]),
         Spacer(1, 6),
@@ -192,15 +196,22 @@ def build():
         P("This is a lived-in house, not a staged one. Here is what needs work, before you drive over."),
         bullets([
             "Kitchen cabinets need touch-ups — not a full refinish",
-            "Exterior stairs need repair or replacement",
-            "One bathroom still has the original 2008 fiberglass shower surround — structurally sound, but noisy and due for replacement",
-            "The crawl space HVAC unit lacks a proper shutoff (noted by Coolray, August 2026)",
-            "A fixture shutoff valve does not fully close when the supply line is disconnected; it does not leak in normal operation. Replacement scheduled.",
+            "The bathrooms are dated to the 2010 renovation",
         ]),
-        P("All of it is reflected in how the property is positioned for offers."),
-        P("Recently replaced deck railings. Newly painted interiors and exteriors by September 6!"),
-        P("What you will also see: a clean, safe, functioning house. Upstairs HVAC replaced 2023 with transferable lifetime warranty (see Section 3). An 1,100 SF deck with reinforced joists and recently replaced railings. A driveway updated in 2023 that fits two cars. Smart water shutoff, Nest thermostats, hardwired cameras. Three bedrooms that have housed working professionals continuously for years."),
-        P("The list above is the disclosure. A written contractor scope with pricing is being prepared and will be added to this packet."),
+        P("None of that is hidden. All of it is reflected in how the property is positioned for offers. Contractor quotes on the remaining work are available on request."),
+        P("Recent updates", "H2"),
+        bullets([
+            "<b>September 2026</b> — Interior and exterior painted",
+            "<b>September 2026</b> — Deck refinished; railings replaced",
+            "<b>September 2026</b> — Front stairs: a section replaced and a handrail added. Five-year written warranty.",
+            "<b>2026</b> — New LVP flooring in the upstairs hallway",
+            "<b>2026</b> — Bedroom carpets professionally cleaned",
+            "<b>2026</b> — New bathroom and kitchen faucets",
+            "<b>2023</b> — Upstairs HVAC fully replaced (Carrier; permitted and City-inspected; transferable lifetime parts and labor warranty)",
+            "<b>2023</b> — Driveway re-poured; fits two cars",
+            "<b>2020</b> — Water heater replaced (tank)",
+        ]),
+        P("What you will also see: a clean, safe, functioning house. Upstairs HVAC replaced 2023 with transferable lifetime warranty (see Section 3). An 1,100 SF deck with reinforced joists and recently replaced railings. A driveway updated in 2023 that fits two cars. Smart water shutoff, Nest thermostats, hardwired cameras. Three bedrooms that have housed working professionals for years."),
     ]
 
     # 3 The House
@@ -209,7 +220,14 @@ def build():
         "new disconnect box and whip kit, plenums mastic-sealed, line set flushed. Permitted; City of Atlanta "
         "inspection completed July 2023. Lifetime parts and labor warranty, transferable. The crawl space unit "
         "serving the first floor is older — the house was gutted and renovated in 2010 following a foreclosure, "
-        "so that system most likely dates to the 2010 renovation rather than to 2005 construction."
+        "so that system most likely dates to the 2010 renovation rather than to 2005 construction. Coolray noted "
+        "in August 2026 that the downstairs unit lacks a dedicated shutoff. The unit most likely dates to the 2010 "
+        "renovation and reflects what was standard at the time of installation."
+    )
+    roof = (
+        "Original to the 2005 construction, approximately 21 years old. Insurable, but at actual cash value rather "
+        "than replacement cost; the current policy is written on a depreciated basis and a buyer should underwrite "
+        "roof insurance accordingly. A five-year warranty covers shingle repair for wind damage."
     )
     story += [
         P("3. The House", "H1"),
@@ -218,10 +236,14 @@ def build():
             ("Configuration", "3 BR / 2.5 BA"),
             ("Year built", "2005 · purchased by current owner 2010"),
             ("Lot", "3,107 SF (0.0713 acres), corner"),
-            ("Deck", "1,100 SF, built 2011. Reinforced joists on the north end — engineered to carry roughly 700 gallons of water plus multiple people; recently replaced railings"),
+            ("Deck", "1,100 SF, built 2011. Reinforced joists on the north end — engineered to carry roughly 700 gallons of water plus multiple people; recently replaced railings. Refinished September 2026."),
             ("HVAC", hvac),
+            ("Roof", roof),
+            ("Water heater", "Replaced in 2020. Tank system."),
+            ("Electrical", "GFCI protection at bathroom receptacles."),
             ("Water", "Moen smart shutoff with remote monitoring"),
             ("Controls", "Nest thermostats; hardwired camera system; Nest/Google cameras at driveway and door"),
+            ("Pest & flood", "No termite bond in place. The property is not in a FEMA-designated flood zone; buyers should verify independently."),
             ("Utilities", "All electric (Georgia Power); water via Atlanta Watershed"),
             ("Parking", "Driveway updated 2023, two vehicles"),
         ]),
@@ -262,7 +284,7 @@ def build():
         Spacer(1, 4),
         P("<b>The pattern: anything that adds a second kitchen is legislative. Everything else is either a variance or requires no relief at all.</b>"),
         P("Consolidation is not reversible without a subdivision, and would foreclose selling the parcels separately. It is offered as one path among several, not a recommendation."),
-        P("A Zoning Verification Letter has been requested under record PLN-ONLINE-26-001614. Note that a ZVL confirms zoning district and overlays only. The substantive conditions in this section come from written correspondence with the Office of Zoning and Development, available on request."),
+        P("Written correspondence with the Office of Zoning and Development is available on request. Note that a Zoning Verification Letter confirms zoning district and overlays only; the substantive conditions in this section come from that correspondence."),
         Spacer(1, 4),
         pend("Plat or survey for both parcels. Lot dimensions above derive from County GIS geometry."),
         P("Buyers must independently verify all zoning, setback, and development parameters with the City of Atlanta Office of Zoning and Development. No representation is made beyond what the City has confirmed in writing.", "SmallI"),
@@ -335,7 +357,7 @@ def build():
     # 7 Valuation
     story += [
         P("7. Valuation", "H1"),
-        P("Accepting offers — both parcels, one closing."),
+        P("Asking price: <b>$529,000</b> — both parcels, one closing. Sold comps and land values as of September 16, 2026. For analysis only — not an appraisal."),
         P("Improved comparables, 18 months", "H2"),
         bullets([
             "Median closed sale: $601,000",
@@ -358,7 +380,7 @@ def build():
         ]),
         Spacer(1, 4),
         P("The combined figure applies the unadjusted land range. The constraints above argue for a lower land component."),
-        P("Offers are invited for a clean, as-is, single-closing transaction."),
+        P("Asking <b>$529,000</b> reflects a price below the county's combined assessed value in exchange for a clean, as-is, single-closing transaction."),
         P("Upper-end reference", "H2"),
         P("218 South Ave SE — 2,668 SF, 4 BR / 4 BA with garage and major upgrades, on a 7,688 SF lot — sold for $825,000 on August 21, 2025. Larger in both structure and land; a ceiling reference, not a direct comparable."),
         P("Market color", "H2"),
@@ -380,7 +402,7 @@ def build():
         [P("Master bedroom", "Cell"), P("Private", "Cell"), P("$1,200", "CellB")],
         [P("Room 2", "Cell"), P("Shared", "Cell"), P("$850", "CellB")],
         [P("Room 3", "Cell"), P("Shared", "Cell"), P("$850", "CellB")],
-        [P("<b>Total at current asking rates</b>", "Cell"), P("", "Cell"), P("<b>$2,900</b>", "CellB")],
+        [P("<b>Total at rates through August 2026</b>", "Cell"), P("", "Cell"), P("<b>$2,900</b>", "CellB")],
     ]
     rt = Table(rent, colWidths=[2.5 * inch, 2.0 * inch, 2.5 * inch])
     rt.setStyle(TableStyle([
@@ -393,24 +415,24 @@ def build():
     ]))
     story += [
         P("9. The Income Option", "H1"),
-        P("Optional. The property delivers vacant and a buyer is free to occupy it, rent it whole, or redevelop. This section is included because the model is documented and transfers with the house."),
-        P("Current room schedule", "H2"),
+        P("Optional. The house is vacant now and a buyer is free to occupy it, rent it whole, or redevelop. This section is included because the model is documented and transfers with the house."),
+        P("Room schedule through August 2026", "H2"),
         rt,
         Spacer(1, 4),
         P("Occupancy", "H2"),
-        P("The house has operated at full occupancy. The most recent stabilized configuration ran at $1,100 + $850 + $850; the $1,100 was a legacy rate on the master and current asking is $1,200."),
-        P("Rooms are let individually under separate written agreements. Tenancies typically run from a few months to a year, tracking hospital rotation blocks, with incoming tenants frequently overlapping departing ones."),
+        P("The house operated at full occupancy for years. The most recent stabilized configuration ran at $1,100 + $850 + $850; the $1,100 was a legacy rate on the master and rates through August 2026 were $1,200 + $850 + $850."),
+        P("Rooms were let individually under separate written agreements. Tenancies typically ran from a few months to a year, tracking hospital rotation blocks, with incoming tenants frequently overlapping departing ones."),
         P("A redacted rent roll showing room, rate, and tenancy period accompanies this packet. Tenant identities are withheld; unredacted agreements can be made available in diligence."),
-        P("How rooms get filled", "H2"),
+        P("How rooms got filled", "H2"),
         bullets([
-            "Tenants are sourced through RotatingRoom, a platform for medium-term room rentals, supplemented by referral from departing tenants",
-            "The tenant base is residents, fellows, and healthcare professionals on hospital rotations — Grady, Emory, and Piedmont are all within a short commute",
+            "Tenants were sourced through RotatingRoom, a platform for medium-term room rentals, supplemented by referral from departing tenants",
+            "The tenant base was residents, fellows, and healthcare professionals on hospital rotations — Grady, Emory, and Piedmont are all within a short commute",
             "Rotations run in fixed blocks, producing a steady supply of people who need a clean, quiet room for a defined period and who leave on schedule",
-            "Departing tenants routinely show the house to incoming ones, which keeps turnover cost near zero",
-            "Rooms have been priced below market deliberately, for occupancy stability. Rates can be adjusted",
-            "This is long-term and medium-term room rental. The property is not operated as a short-term rental",
+            "Departing tenants routinely showed the house to incoming ones, which kept turnover cost near zero",
+            "Rooms were priced below market deliberately, for occupancy stability. Rates can be adjusted",
+            "This was long-term and medium-term room rental. The property was not operated as a short-term rental",
         ]),
-        P("<b>All current agreements expire August 25, 2026. The property is delivered vacant at closing. Nothing is inherited and no tenant has a right to remain.</b>"),
+        P("<b>Vacant now. Showings by appointment. Nothing is inherited and no tenant has a right to remain.</b>"),
     ]
 
     # 10 Offer
