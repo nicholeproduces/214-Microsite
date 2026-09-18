@@ -51,37 +51,10 @@ h1 {
   color: #4b5563;
 }
 
-.hero-asking {
-  margin: 0.85rem 0 1.1rem;
-}
 
-.hero-asking-price {
-  margin: 0;
-  font-size: clamp(2.4rem, 8vw, 3.4rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: #0b1020;
-}
 
-.hero-asking-context {
-  margin: 0.55rem 0 0;
-  font-size: 0.98rem;
-  color: #374151;
-  max-width: 36rem;
-}
 
-.hero-asking-tagline {
-  margin: 0.45rem 0 0;
-  font-size: 1.05rem;
-  color: #111827;
-}
 
-.hero-asking-detail {
-  margin: 0.35rem 0 0;
-  font-size: 0.95rem;
-  color: #4b5563;
-}
 
 .print-page-link-wrap {
   max-width: 1120px;
@@ -1125,22 +1098,8 @@ ul {
   margin-top: 1rem;
 }
 
-.offer-section {
-  background-color: #ffffff;
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
-}
 
-.contact-cta .btn-block + .btn-block {
-  margin-top: 0.75rem;
-}
 
-.contact-cta .cta-pair,
-.contact-cta {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
 
 /* Systems */
 
@@ -1354,16 +1313,6 @@ ul {
   font-size: 0.9rem;
 }
 
-/* Contact */
-
-.contact {
-  background-color: #ffffff;
-  border-top: 1px solid #e5e7eb;
-}
-
-.contact-cta {
-  align-self: center;
-}
 
 /* Footer */
 
@@ -1493,7 +1442,6 @@ ul {
   .header-ctas,
   .print-page-link-wrap,
   .cta-pair,
-  .contact-cta,
   .footer-actions,
   .hero-price .cta-pair,
   .seo-content {
