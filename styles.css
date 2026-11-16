@@ -1592,4 +1592,12 @@ ul {
   }
 }
 
+.recent-updates .update-heading {
+  margin: 0 0 0.35rem;
+}
+
+.recent-updates .update-group + .update-group {
+  margin-top: 1.15rem;
+}
+
 
